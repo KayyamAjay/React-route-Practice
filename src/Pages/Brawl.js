@@ -1,9 +1,16 @@
+import { Link } from "react-router-dom";
 const Brawl = () => {
   return (
     <ul>
-      <li>Piper</li>
-      <li>Amber</li>
-      <li>Lola</li>
+      <li>
+        <Link to="/brawl/piper">Piper</Link>
+      </li>
+      <li>
+        <Link to="/brawl/amber">Amber</Link>
+      </li>
+      <li>
+        <Link to="/brawl/lola">Lola</Link>
+      </li>
     </ul>
   );
 };

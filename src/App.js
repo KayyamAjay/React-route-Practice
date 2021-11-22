@@ -1,4 +1,4 @@
-import { Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import Welcome from "./Pages/Welcome";
 import Brawl from "./Pages/Brawl";
 import MainHeader from "./components/MainHeader";
@@ -8,15 +8,18 @@ function App() {
     <div>
       <MainHeader />
       <main>
-        <Route path="/Welcome">
-          <Welcome />
-        </Route>
-        <Route path="/Brawl">
-          <Brawl />
-        </Route>
-        <Route path="/brawl-detial/:brawlid">
-          <BrawlDetails />
-        </Route>
+        <Switch>
+          <Route path="/welcome">
+            <Welcome />
+          </Route>
+          <Route path="/brawl" exact>
+            <Brawl />
+          </Route>
+          <Route path="/brawl/:brawlid">
+            <BrawlDetails />
+          </Route>
+          ]
+        </Switch>
       </main>
     </div> //path is special props to specific the path of the url
   );
