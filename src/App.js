@@ -1,7 +1,15 @@
+import { Route } from "react-router-dom";
+import Welcome from "./Pages/Welcome";
+import Brawl from "./Pages/Brawl";
 function App() {
   return (
     <div>
-      <h2>Let's get started!</h2>
+      <Route path="/Welcome">
+        <Welcome />
+      </Route>
+      <Route path="/Brawl">
+        <Brawl />
+      </Route>
     </div>
   );
 }
